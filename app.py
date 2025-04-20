@@ -15,7 +15,7 @@ HTML_TEMPLATE = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BWU Attendance Booster</title>
+    <title>📚BWU Attendance Summarizer</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 30px; text-align: center; }
         h1 { color: #1F4E78; }
@@ -25,10 +25,18 @@ HTML_TEMPLATE = '''
         button:hover, a:hover { background-color: #163b5c; }
         a.download-link { background: #28a745; }
         a.download-link:hover { background: #218838; }
+        h2 { color: #48A6A7; }
+        form, .buttons { background: #fff; padding: 20px; border-radius: 8px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input[type=file] { margin: 10px 0; }
+        button, a { background-color: #48A6A7; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
+        button:hover, a:hover { background-color: #163b5c; }
+        a.download-link { background: #28a745; }
+        a.download-link:hover { background: #218838; }
     </style>
 </head>
 <body>
-    <h1>📊 BWU Attendance Booster</h1>
+    <h1>📊 Format your BWU Attendance File</h1>
+    <h2>👇Upload your file to see the Magic👇</h2>
 
     {% if not excel_ready %}
     <form action="/upload" method="post" enctype="multipart/form-data">
